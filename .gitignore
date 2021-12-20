@@ -1,6 +1,11 @@
 # dependencies:
 node_modules/
 
+.htaccess
+node_modules/
+stderr.log
+tmp/
+
 # compiled files:
 
 # environment variables:
