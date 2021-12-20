@@ -1,6 +1,6 @@
 # Intergram - [Demo](https://www.intergram.xyz/)
 
-A **Free** live chat widget that you can easily add to your website. It will let you chat with your website visitors using your Telegram messenger. 
+A **Free** live chat widget that you can easily add to your website. It will let you chat with your website visitors using your Telegram messenger.
 
 #### :tada: Main Contributors :tada:
 - [aslauris](https://github.com/aslauris) - Who redesgined the new UI! Check out his website - [wedofe.com](https://www.wedofe.com/)
@@ -19,8 +19,8 @@ By using a Telegram bot, I delegate all the message routing work and chat state 
 
   <p align="center"> <img src="docs/bot-start.gif"/> </p>
 
-2. Paste this code snippet right before the closing body tag of every page where you want the chat to appear 
-(Don't forget to add your actual chat ID). 
+2. Paste this code snippet right before the closing body tag of every page where you want the chat to appear
+(Don't forget to add your actual chat ID).
 
 ```html
 <script> window.intergramId = "Your unique chat id" </script>
@@ -34,7 +34,7 @@ By using a Telegram bot, I delegate all the message routing work and chat state 
 ### Customization - [Try It](https://jsfiddle.net/z9ffzr9n/6/)
 Currently you can customize all visible texts and the main widget color by setting an optional `intergramCustomizations` object in the injection script tag. (All its properties are also optional and will fallback to their original values)
 ```html
-<script> 
+<script>
     window.intergramId = "Your unique chat id";
     window.intergramCustomizations = {
         titleClosed: 'Closed chat title',
@@ -56,25 +56,25 @@ Currently you can customize all visible texts and the main widget color by setti
   - Using [Preact](https://github.com/developit/preact) helped creating a pretty minimal `js` bundle.
   - The widget injection script is about 5KB gziped and executes only after the host page finished loading ('onload' event).
   - The chat iframe will only be loaded if the user interacts with the chat widget (currently about 40KB gziped).
-  
+
 ![](docs/footprint.png)
 
 ### Deploy your own Intergram instance (Self Hosting)
 1. Talk to Telegram [@BotFather](https://telegram.me/botfather), create a new bot and get its API Token.
 
-2. Deploy this repo to your own chat server. 
+2. Deploy this repo to your own chat server.
   - Clone it locally and install or if you use Heroku, fork this repository and point the new app to it.
   - Set an .env variable named `TELEGRAM_TOKEN` with the value you got from @BotFather
 
 3. Point the bot webhook to your bot server by making a `GET` request to the following url
-  `https://api.telegram.org/bot<TOKEN>/setWebhook?url=<Server url>/hook`
+  `https://api.telegram.org/bot5074684552:AAET4aL997M9IZjwzNN03ERO5d5tUJea4FM/setWebhook?url=https://chat.link.co.zw/hook`
   (Don't forget to replace with your token and server url)
 
 4. Open a chat with your bot and hit `/start` to get your unique chat ID
 
 5. Embed this code snippet in your website
   ```html
-  <script> 
+  <script>
       window.intergramId = "Your unique chat ID"
       window.intergramServer = "Server url"
   </script>
