@@ -2,7 +2,6 @@
 node_modules/
 
 # compiled files:
-dist/
 
 # environment variables:
 .env
